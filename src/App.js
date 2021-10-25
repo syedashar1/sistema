@@ -43,7 +43,7 @@ function App() {
 
       dinner : [] ,
 
-      snack : []
+      snack : [],
     }
 
     let y = cals 
