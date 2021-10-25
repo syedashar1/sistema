@@ -18,7 +18,7 @@ export default function DietForm({ cals , valError , meal , setCals , setMeal , 
 
 
     return (
-        <div>
+        <div data-testid='form'>
             <Grid container spacing={5}>
 
         <Grid item lg={2} md={3}  >
@@ -121,7 +121,7 @@ export default function DietForm({ cals , valError , meal , setCals , setMeal , 
 
       <br/><br/>
 
-      <Button size='large' variant='contained' onClick={generateHandler} >Generate</Button>
+      <Button  size='large' variant='contained' onClick={generateHandler} >Generate</Button>
 
       {valError && <div style={{margin:'20px'}} >
         <Alert severity="error">{valError}</Alert>
