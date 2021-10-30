@@ -12,7 +12,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export const mainListItems = (
   <div>
-    <ListSubheader inset>Saved report</ListSubheader>
+    <ListSubheader inset>PGE</ListSubheader>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
@@ -48,7 +48,7 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Saved report</ListSubheader>
+    <ListSubheader inset>PPME</ListSubheader>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />

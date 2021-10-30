@@ -8,6 +8,8 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
@@ -21,6 +23,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import data from '../../utils/data';
 
 function Copyright(props) {
   return (
@@ -89,8 +92,9 @@ export default function Layout({children}) {
     setOpen(!open);
   };
 
+  const [AutoC, setAutoC ] = React.useState([])
   React.useEffect(() => {
-     console.log(children);
+     setAutoC(data.films)
   }, [])
 
   return (
@@ -115,6 +119,17 @@ export default function Layout({children}) {
             >
               <MenuIcon />
             </IconButton>
+            <Autocomplete disablePortal id="combo-box-demo" options={AutoC}
+            sx={{ width: 200 , fontSize:'0.5rem'}}
+            style={{backgroundColor:'#ededed',borderRadius:'10px'}}
+            renderInput={(params) => <TextField  {...params} label="Ciclo" />}
+            />{' '}
+            <Autocomplete disablePortal id="combo-box-demo2" options={AutoC}
+            sx={{ width: 200 , fontSize:'0.5rem'}}
+            style={{color:'white',borderRadius:'10px',marginLeft:'15px'}}
+            renderInput={(params) => <TextField  {...params} label="Gercimendo" />}
+            />
+
             <Typography
               component="h1"
               variant="h6"
@@ -122,7 +137,7 @@ export default function Layout({children}) {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+               
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
