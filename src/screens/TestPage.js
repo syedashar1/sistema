@@ -21,7 +21,7 @@ export default function TestPage() {
         </TitleBar>
         
 
-        <Filtors x y setCodigo setTilto Codigo Tilto setY setX/>
+        <Filtors x={x} y={y} setCodigo={setCodigo} setTilto={setTilto} Codigo={Codigo} Tilto={Tilto} setY={setY} setX={setX}/>
         
         
         </Layout>
